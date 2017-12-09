@@ -9,6 +9,14 @@
 2. Added media tag to print stylesheet
 3. Moved analytics to bottom of HTML and added async attribute
 
+#### 2. style.css
+1. added will-change to body
+
+#### 3. views/pizza.html
+1. added will-change to pizza styles
+
+#### 4. views/css/style.css
+
 
 
 #### Part 2: Optimize Frames per Second in pizza.html

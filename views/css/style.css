@@ -8,6 +8,7 @@
 }
 
 body {
+  will-change: transform;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: black;
 }
@@ -36,6 +37,7 @@ form {
 }
 
 .randomPizzaContainer {
+  will-change: transform;
   float: left;
   display: flex;
 }

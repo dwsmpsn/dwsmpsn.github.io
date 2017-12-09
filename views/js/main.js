@@ -434,10 +434,10 @@ var resizePizzas = function(size) {
           console.log("bug in sizeSwitcher");
       }
 
-    //var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
 
     for (var i = 0; i < randomPizzas.length; i++) {
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+      randomPizzas[i].style.width = newWidth + "%";
     }
   }
 

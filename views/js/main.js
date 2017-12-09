@@ -425,19 +425,19 @@ var resizePizzas = function(size) {
   function changePizzaSizes(size) {
     switch(size) {
         case "1":
-          return 25;
+          return 0.25;
         case "2":
-          return 33.33;
+          return 0.3333;
         case "3":
-          return 50;
+          return 0.5;
         default:
           console.log("bug in sizeSwitcher");
       }
 
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
+    //var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
 
     for (var i = 0; i < randomPizzas.length; i++) {
-      randomPizzas[i].style.width = newWidth + "%";
+      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newWidth + "%";
     }
   }
 

@@ -11,6 +11,7 @@
 
 #### 2. style.css
 1. added will-change to body
+2. added will-change to movingPizzas and pizzaGenerator IDs
 
 #### 3. views/pizza.html
 1. added will-change to pizza styles

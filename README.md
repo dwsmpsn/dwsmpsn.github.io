@@ -14,9 +14,13 @@
 2. added will-change to pizzaGenerator id and mover class
 
 #### 3. views/pizza.html
-1. added will-change to pizza styles
+
 
 #### 4. views/css/style.css
+1. added will-change to pizzaGenerator
+
+#### 5. views/js/main.js
+1. fixed resizePizzas
 
 
 

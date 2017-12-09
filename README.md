@@ -12,6 +12,7 @@
 #### 2. style.css
 1. added will-change to body
 2. added will-change to pizzaGenerator id and mover class
+3. edited CSS to look up single IDs instead of multiple levels of class lookups
 
 #### 3. views/pizza.html
 

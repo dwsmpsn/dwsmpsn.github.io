@@ -15,13 +15,13 @@
 3. edited CSS to look up single IDs instead of multiple levels of class lookups
 
 #### 3. views/pizza.html
-
+1. no changes necessary to this html
 
 #### 4. views/css/style.css
 1. added will-change to pizzaGenerator
 
 #### 5. views/js/main.js
-1. fixed resizePizzas
+1. fixed resizePizzas, referencing solution from a previous lesson
 
 
 

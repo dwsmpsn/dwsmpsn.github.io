@@ -421,7 +421,8 @@ var resizePizzas = function(size) {
 
   changeSliderLabel(size);
 
-   // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
+  // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
+  // Had to fix bug in my code that wasn't actually resizing the pizzas, referenced the solution from previous lesson
   function changePizzaSizes(size) {
     switch(size) {
         case "1":

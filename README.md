@@ -25,3 +25,4 @@
 2. changed querySelector to getElementById at the suggestion of project reviewer
 3. changed querySelectorAll to getElementsByClassName at the suggestion of project reviewer
 4. declared phase in the for loop initialization and refactored variable so that each loop doesn't need to redo the same calculations
+5. changed background pizza generation to limit number based on screen size

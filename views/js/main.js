@@ -499,7 +499,7 @@ function updatePositions() {
   // declared phase in the for loop initialization and refactored variable so that
   // each loop doesn't need to redo the same calculations
   var top = (document.documentElement.scrollTop || document.body.scrollTop) / 1250;
-  for (var i = 0; i < items.length, phase; i++) {
+  for (var i = 0, phase; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
     phase = Math.sin(top + i % 5);
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -519,18 +519,22 @@ function updatePositions() {
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
+// added iHeight and maxRows to get height of screen and determine how many pizzas to generate
 document.addEventListener('DOMContentLoaded', function() {
+  var iHeight = window.screen.height;
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
-    var elem = document.createElement('img');
+  var maxRows = Math.floor(iHeight / s);
+  var movingPizzas = document.getElementById("movingPizzas1")
+  for (var i = 0, elem; i <= (cols * maxRows); i++) {
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.getElementById("movingPizzas1").appendChild(elem);
+    movingPizzas.appendChild(elem);
   }
   updatePositions();
 });

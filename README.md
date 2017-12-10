@@ -1,5 +1,6 @@
 ## Website Performance Optimization portfolio project
 
+#### To run project: visit dwsmpsn.github.io or click index.html
 
 
 ### Optimizations Made:
@@ -9,6 +10,8 @@
 2. Added media tag to print stylesheet
 3. Moved analytics to bottom of HTML and added async attribute
 4. reintroduced google font
+5. inlined CRP css and moved the full file to end of body
+6. moved scripts that I had after the body back into the body
 
 #### 2. style.css
 1. added will-change to body
@@ -20,6 +23,7 @@
 
 #### 4. views/css/style.css
 1. added will-change to pizzaGenerator
+2. added transform and backface-visibility properties to mover class at reviewer suggestion
 
 #### 5. views/js/main.js
 1. fixed resizePizzas, referencing solution from a previous lesson

@@ -403,16 +403,17 @@ var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
+  // changed querySelector to getElementById at the suggestion of project reviewer
   function changeSliderLabel(size) {
     switch(size) {
       case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
+        document.getElementById("pizzaSize").innerHTML = "Small";
         return;
       case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
+        document.getElementById("pizzaSize").innerHTML = "Medium";
         return;
       case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
+        document.getElementById("pizzaSize").innerHTML = "Large";
         return;
       default:
         console.log("bug in changeSliderLabel");
@@ -437,10 +438,11 @@ var resizePizzas = function(size) {
         default:
           console.log("bug in sizeSwitcher");
       }
+    // changed querySelectorAll to getElementsByClassName on suggestion from reviewer
+    var randomPizzas = document.getElementsByClassName("randomPizzaContainer");
 
-    var randomPizzas = document.querySelectorAll(".randomPizzaContainer");
-
-    for (var i = 0; i < randomPizzas.length; i++) {
+    var numOfPizzas = randomPizzas.length;
+    for (var i = 0; i < numOfPizzas; i++) {
       randomPizzas[i].style.width = newWidth + "%";
     }
   }
@@ -490,11 +492,16 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
-  for (var i = 0; i < items.length; i++) {
+  // changed querySelectorAll to getElementsByClassName on suggestion of reviewer
+  var items = document.getElementsByClassName('.mover');
+
+  // efficiency fix suggested by reviewer:
+  // declared phase in the for loop initialization and refactored variable so that
+  // each loop doesn't need to redo the same calculations
+  var top = (document.documentElement.scrollTop || document.body.scrollTop) / 1250;
+  for (var i = 0; i < items.length, phase; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var phase = Math.sin((scrollTop / 1250) + (i % 5));
+    phase = Math.sin(top + i % 5);
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -523,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    document.getElementById("movingPizzas1").appendChild(elem);
   }
   updatePositions();
 });

@@ -8,6 +8,7 @@
 1. All images have been resized and compressed.
 2. Added media tag to print stylesheet
 3. Moved analytics to bottom of HTML and added async attribute
+4. reintroduced google font
 
 #### 2. style.css
 1. added will-change to body
@@ -22,3 +23,7 @@
 
 #### 5. views/js/main.js
 1. fixed resizePizzas, referencing solution from a previous lesson
+2. changed querySelector to getElementById at the suggestion of project reviewer
+3. changed querySelectorAll to getElementsByClassName at the suggestion of project reviewer
+4. declared phase in the for loop initialization and refactored variable so that each loop doesn't need to redo the same calculations
+5. changed background pizza generation to limit number based on screen size

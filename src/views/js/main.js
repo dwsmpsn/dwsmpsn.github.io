@@ -493,7 +493,7 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   // changed querySelectorAll to getElementsByClassName on suggestion of reviewer
-  var items = document.getElementsByClassName('.mover');
+  var items = document.getElementsByClassName('mover');
 
   // efficiency fix suggested by reviewer:
   // declared phase in the for loop initialization and refactored variable so that
